@@ -1,0 +1,3 @@
+# HTML files
+*.html           eol=lf
+*.html.part      eol=lf

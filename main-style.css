@@ -1,0 +1,91 @@
+/*************************\
+|**    Header styles    **|
+\*************************/
+
+html, body {
+    height:100%;
+}
+
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.title_container {
+}
+
+.title_header {
+    /* Prevent y scroll-bar recenter effect */
+    padding-left: calc(100vw - 100%);
+}
+
+/* HTML report title */
+.title_text, .content_title {
+    font-weight: bold;
+    font-size: 2.1em;
+    text-align: center;
+    color: #5959FF;
+}
+
+.title_text {
+    padding-top: 40px;
+}
+
+.content_title {
+    padding-top: 10px;
+}
+
+/* HTML report separator */
+.title_separator, .page_separator {
+    margin: 40px auto;
+    display: block;
+    border-radius: 10px;
+    background-color: #0000b9;
+}
+
+.title_separator {
+    width: 425px;
+    height: 10px;
+}
+
+.page_separator {
+    width: 80%;
+    height: 5px;
+}
+
+/* Disclaimer message */
+.disclaimer {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #ffd1a0;
+    color: #a25605;
+    text-align: center;
+}
+
+.page_content {
+    padding: 40px;
+    padding-top: 10px;
+}
+
+.content_section {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.content_text {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fafafa;
+    font-size: 1.1em;
+    border-radius: 8px;
+    border: solid thin black;
+}
+
+.content_text_title {
+    font-size: 1.1em;
+    color: #03068f;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}

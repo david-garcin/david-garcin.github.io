@@ -1,4 +1,4 @@
-async function updateContentOnceLoaded14()
+async function updateContentOnceLoaded15()
 {
     var data =`
 ==1== Memcheck, a memory error detector<br />
@@ -27,7 +27,7 @@ async function updateContentOnceLoaded14()
 ==1== For counts of detected and suppressed errors, rerun with: -v<br />
 ==1== <span class="valgrind_summary_title">ERROR SUMMARY:</span> 1 errors from 1 contexts (suppressed: 0 from 0)<br />
 `;
-    var analysis_div = document.getElementById('valgrind.result14.Report');
+    var analysis_div = document.getElementById('valgrind.result15.Report');
     analysis_div.innerHTML=data;
 }
-updateContentOnceLoaded14();
+updateContentOnceLoaded15();

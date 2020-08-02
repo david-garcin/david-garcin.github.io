@@ -1,4 +1,4 @@
-async function updateContentOnceLoaded17()
+async function updateContentOnceLoaded2()
 {
     var data =`
 ==1== Memcheck, a memory error detector<br />
@@ -13,6 +13,12 @@ async function updateContentOnceLoaded17()
 ==1== <span class="leak_context_info">&nbsp;Uninitialised value was created by a stack allocation</span><br />
 ==1== &nbsp; &nbsp;at 0x10101042: breakage::evil_jump_on_stack_uninitialized_value() (<span class="leak_file_info">main.cpp:5</span>)<br />
 ==1== <br />
+<div class="suppression_title" onclick="javascript:ToogleSuppressionVisibility(this)"><span class="suppression_visibility_icon"><div class="expand"><div></div></div></span> Show generated suppression</div><br /><div class="hidden suppression_content">{<br />
+ &nbsp; &lt;insert_a_suppression_name_here&gt;<br />
+ &nbsp; Memcheck:Cond<br />
+ &nbsp; fun:_ZN8breakage38evil_jump_on_stack_uninitialized_valueEv<br />
+ &nbsp; fun:main<br />
+}</div>====<br />====<br />
 ==1== <span class="warning_leak">Conditional jump or move depends on uninitialised value(s)</span><br />
 ==1== &nbsp; &nbsp;at 0x10101042: std::ostreambuf_iterator&lt;char, std::char_traits&lt;char&gt; &gt; std::num_put&lt;char, std::ostreambuf_iterator&lt;char, std::char_traits&lt;char&gt; &gt; &gt;::_M_insert_int&lt;long&gt;(std::ostreambuf_iterator&lt;char, std::char_traits&lt;char&gt; &gt;, std::ios_base&amp;, char, long) const (in a_host_lib.so)<br />
 ==1== &nbsp; &nbsp;by 0x10101042: std::ostream&amp; std::ostream::_M_insert&lt;long&gt;(long) (in a_host_lib.so)<br />
@@ -23,6 +29,14 @@ async function updateContentOnceLoaded17()
 ==1== &nbsp; &nbsp;by 0x10101042: breakage::evil_use_of_uninitialized_value() (<span class="leak_file_info">main.cpp:23</span>)<br />
 ==1== &nbsp; &nbsp;by 0x10101042: main (<span class="leak_file_info">main.cpp:35</span>)<br />
 ==1== <br />
+<div class="suppression_title" onclick="javascript:ToogleSuppressionVisibility(this)"><span class="suppression_visibility_icon"><div class="expand"><div></div></div></span> Show generated suppression</div><br /><div class="hidden suppression_content">{<br />
+ &nbsp; &lt;insert_a_suppression_name_here&gt;<br />
+ &nbsp; Memcheck:Cond<br />
+ &nbsp; fun:_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE13_M_insert_intIlEES3_S3_RSt8ios_basecT_<br />
+ &nbsp; fun:_ZNSo9_M_insertIlEERSoT_<br />
+ &nbsp; fun:_ZN8breakage31evil_use_of_uninitialized_valueEv<br />
+ &nbsp; fun:main<br />
+}</div>====<br />====<br />
 ==1== <span class="warning_leak">Use of uninitialised value of size 42</span><br />
 ==1== &nbsp; &nbsp;at 0x10101042: ??? (in a_host_lib.so)<br />
 ==1== &nbsp; &nbsp;by 0x10101042: std::ostreambuf_iterator&lt;char, std::char_traits&lt;char&gt; &gt; std::num_put&lt;char, std::ostreambuf_iterator&lt;char, std::char_traits&lt;char&gt; &gt; &gt;::_M_insert_int&lt;long&gt;(std::ostreambuf_iterator&lt;char, std::char_traits&lt;char&gt; &gt;, std::ios_base&amp;, char, long) const (in a_host_lib.so)<br />
@@ -34,6 +48,15 @@ async function updateContentOnceLoaded17()
 ==1== &nbsp; &nbsp;by 0x10101042: breakage::evil_use_of_uninitialized_value() (<span class="leak_file_info">main.cpp:23</span>)<br />
 ==1== &nbsp; &nbsp;by 0x10101042: main (<span class="leak_file_info">main.cpp:35</span>)<br />
 ==1== <br />
+<div class="suppression_title" onclick="javascript:ToogleSuppressionVisibility(this)"><span class="suppression_visibility_icon"><div class="expand"><div></div></div></span> Show generated suppression</div><br /><div class="hidden suppression_content">{<br />
+ &nbsp; &lt;insert_a_suppression_name_here&gt;<br />
+ &nbsp; Memcheck:Value8<br />
+ &nbsp; obj:/path/to/a_host_lib.so<br />
+ &nbsp; fun:_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE13_M_insert_intIlEES3_S3_RSt8ios_basecT_<br />
+ &nbsp; fun:_ZNSo9_M_insertIlEERSoT_<br />
+ &nbsp; fun:_ZN8breakage31evil_use_of_uninitialized_valueEv<br />
+ &nbsp; fun:main<br />
+}</div>====<br />====<br />
 ==1== <span class="warning_leak">Conditional jump or move depends on uninitialised value(s)</span><br />
 ==1== &nbsp; &nbsp;at 0x10101042: ??? (in a_host_lib.so)<br />
 ==1== &nbsp; &nbsp;by 0x10101042: std::ostreambuf_iterator&lt;char, std::char_traits&lt;char&gt; &gt; std::num_put&lt;char, std::ostreambuf_iterator&lt;char, std::char_traits&lt;char&gt; &gt; &gt;::_M_insert_int&lt;long&gt;(std::ostreambuf_iterator&lt;char, std::char_traits&lt;char&gt; &gt;, std::ios_base&amp;, char, long) const (in a_host_lib.so)<br />
@@ -45,6 +68,15 @@ async function updateContentOnceLoaded17()
 ==1== &nbsp; &nbsp;by 0x10101042: breakage::evil_use_of_uninitialized_value() (<span class="leak_file_info">main.cpp:23</span>)<br />
 ==1== &nbsp; &nbsp;by 0x10101042: main (<span class="leak_file_info">main.cpp:35</span>)<br />
 ==1== <br />
+<div class="suppression_title" onclick="javascript:ToogleSuppressionVisibility(this)"><span class="suppression_visibility_icon"><div class="expand"><div></div></div></span> Show generated suppression</div><br /><div class="hidden suppression_content">{<br />
+ &nbsp; &lt;insert_a_suppression_name_here&gt;<br />
+ &nbsp; Memcheck:Cond<br />
+ &nbsp; obj:/path/to/a_host_lib.so<br />
+ &nbsp; fun:_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE13_M_insert_intIlEES3_S3_RSt8ios_basecT_<br />
+ &nbsp; fun:_ZNSo9_M_insertIlEERSoT_<br />
+ &nbsp; fun:_ZN8breakage31evil_use_of_uninitialized_valueEv<br />
+ &nbsp; fun:main<br />
+}</div>====<br />====<br />
 ==1== <span class="warning_leak">Conditional jump or move depends on uninitialised value(s)</span><br />
 ==1== &nbsp; &nbsp;at 0x10101042: std::ostreambuf_iterator&lt;char, std::char_traits&lt;char&gt; &gt; std::num_put&lt;char, std::ostreambuf_iterator&lt;char, std::char_traits&lt;char&gt; &gt; &gt;::_M_insert_int&lt;long&gt;(std::ostreambuf_iterator&lt;char, std::char_traits&lt;char&gt; &gt;, std::ios_base&amp;, char, long) const (in a_host_lib.so)<br />
 ==1== &nbsp; &nbsp;by 0x10101042: std::ostream&amp; std::ostream::_M_insert&lt;long&gt;(long) (in a_host_lib.so)<br />
@@ -55,6 +87,14 @@ async function updateContentOnceLoaded17()
 ==1== &nbsp; &nbsp;by 0x10101042: breakage::evil_use_of_uninitialized_value() (<span class="leak_file_info">main.cpp:23</span>)<br />
 ==1== &nbsp; &nbsp;by 0x10101042: main (<span class="leak_file_info">main.cpp:35</span>)<br />
 ==1== <br />
+<div class="suppression_title" onclick="javascript:ToogleSuppressionVisibility(this)"><span class="suppression_visibility_icon"><div class="expand"><div></div></div></span> Show generated suppression</div><br /><div class="hidden suppression_content">{<br />
+ &nbsp; &lt;insert_a_suppression_name_here&gt;<br />
+ &nbsp; Memcheck:Cond<br />
+ &nbsp; fun:_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE13_M_insert_intIlEES3_S3_RSt8ios_basecT_<br />
+ &nbsp; fun:_ZNSo9_M_insertIlEERSoT_<br />
+ &nbsp; fun:_ZN8breakage31evil_use_of_uninitialized_valueEv<br />
+ &nbsp; fun:main<br />
+}</div>====<br />====<br />
 ==1== <br />
 ==1== <span class="valgrind_summary_title">HEAP SUMMARY:</span><br />
 ==1== &nbsp; &nbsp; in use at exit: 0 bytes in 0 blocks<br />
@@ -65,7 +105,7 @@ async function updateContentOnceLoaded17()
 ==1== For counts of detected and suppressed errors, rerun with: -v<br />
 ==1== <span class="valgrind_summary_title">ERROR SUMMARY:</span> 5 errors from 5 contexts (suppressed: 0 from 0)<br />
 `;
-    var analysis_div = document.getElementById('valgrind.result17.Report');
+    var analysis_div = document.getElementById('valgrind.result2.Report');
     analysis_div.innerHTML=data;
 }
-updateContentOnceLoaded17();
+updateContentOnceLoaded2();

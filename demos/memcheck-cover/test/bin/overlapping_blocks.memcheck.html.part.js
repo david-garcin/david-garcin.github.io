@@ -1,4 +1,4 @@
-async function updateContentOnceLoaded10()
+async function updateContentOnceLoaded11()
 {
     var data =`
 ==1== Memcheck, a memory error detector<br />
@@ -43,7 +43,7 @@ In the bug report, send all the above text, the valgrind<br />
 version, and what OS and version you are using. &nbsp;Thanks.<br />
 <br />
 `;
-    var analysis_div = document.getElementById('valgrind.result10.Report');
+    var analysis_div = document.getElementById('valgrind.result11.Report');
     analysis_div.innerHTML=data;
 }
-updateContentOnceLoaded10();
+updateContentOnceLoaded11();

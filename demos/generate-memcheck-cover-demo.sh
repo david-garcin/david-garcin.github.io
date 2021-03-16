@@ -9,7 +9,7 @@ current_full_path=$(readlink -e "${current_script_dir}")
 memcheck_demo_dir="${current_full_path}/memcheck-cover/"
 tmp_out_dir="${current_full_path}/tmp/"
 
-RESET_FORMAT=$(echo -e '\e[00m')
+RESET_FORMAT=$(echo -e '\e[0m')
 RED_COLOR=$(echo -e '\e[31m')
 GREEN_COLOR=$(echo -e '\e[32m')
 CYAN_COLOR=$(echo -e '\e[0;36m')
